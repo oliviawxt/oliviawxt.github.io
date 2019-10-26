@@ -63,7 +63,6 @@ $(document).ready(function() {
                     },
                 ]
             });
-
         }); // end .getJSON
     }); // end button
 
