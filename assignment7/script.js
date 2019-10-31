@@ -70,7 +70,7 @@ $(document).ready(function() {
     $("button#get_data2").click(function() {
         var items = [];
         var i = 0;
-        var airtable_read_endpoint = "https://api.airtable.com/v0/appLrs60Hq3cBBG0e/Table%201?api_key=keypNebOgWW9S70Um";
+        var airtable_read_endpoint = "https://api.airtable.com/v0/appLrs60Hq3cBBG0e/type?api_key=keypNebOgWW9S70Um";
         var dataSet = [];
         $.getJSON(airtable_read_endpoint, function(result) {
             $.each(result.records, function(key, value) {
