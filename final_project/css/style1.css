@@ -584,29 +584,188 @@
                             opacity: 0;
                         }
                     }
+                    /*--------------------------------------------------------------
+# Schedule Section
+--------------------------------------------------------------*/
                     
-                    #sidebar {
-                        margin-top: 30px;
-                        margin-right: 100px;
-                        border-left: 30px;
-                        padding-right: 15px;
-                        padding-left: 50px;
+                    #schedule {
+                        padding: 60px 0 60px 0;
                     }
                     
-                    .list-group {
-                        position: relative;
+                    #schedule .nav-tabs {
+                        text-align: center;
+                        margin: auto;
                         display: block;
-                        border: 1px solid;
-                        margin-top: 40px;
+                        border-bottom: 0;
+                        margin-bottom: 30px;
+                    }
+                    
+                    #schedule .nav-tabs li {
+                        display: inline-block;
+                        margin-bottom: 0;
+                    }
+                    
+                    #schedule .nav-tabs a {
+                        border: none;
+                        border-radius: 50px;
+                        font-weight: 600;
+                        background-color: #0e1b4d;
+                        color: #fff;
+                        padding: 10px 100px;
+                    }
+                    
+                    #schedule .nav-tabs a.active {
+                        background-color: #f82249;
+                        color: #fff;
+                    }
+                    
+                    #schedule .sub-heading {
+                        text-align: center;
+                        font-size: 18px;
+                        font-style: italic;
+                        margin: 0 auto 30px auto;
+                    }
+                    
+                    #schedule .tab-pane {
+                        transition: ease-in-out .2s;
+                    }
+                    
+                    #schedule .schedule-item {
+                        border-bottom: 1px solid #cad4f6;
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                        transition: background-color ease-in-out 0.3s;
+                    }
+                    
+                    #schedule .schedule-item:hover {
+                        background-color: #fff;
+                    }
+                    
+                    #schedule .schedule-item time {
+                        padding-bottom: 5px;
+                        display: inline-block;
+                    }
+                    
+                    #schedule .schedule-item .speaker {
+                        width: 60px;
+                        height: 60px;
                         overflow: hidden;
-                        padding: 1px 1px;
+                        border-radius: 50%;
+                        float: left;
+                        margin: 0 10px 10px 0;
                     }
                     
-                    .list-group-item {
+                    #schedule .schedule-item .speaker img {
+                        height: 100%;
+                        -webkit-transform: translateX(-50%);
+                        transform: translateX(-50%);
+                        margin-left: 50%;
+                        transition: all ease-in-out 0.3s;
+                    }
+                    
+                    #schedule .schedule-item h4 {
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-bottom: 5px;
+                    }
+                    
+                    #schedule .schedule-item h4 span {
+                        font-style: italic;
+                        color: #19328e;
+                        font-weight: normal;
+                        font-size: 16px;
+                    }
+                    
+                    #schedule .schedule-item p {
+                        font-style: italic;
+                        color: #152b79;
+                        margin-bottom: 0;
+                    }
+                    /* Sections Header
+--------------------------------*/
+                    
+                    .section-header {
+                        margin-bottom: 60px;
                         position: relative;
+                        padding-bottom: 20px;
+                    }
+                    
+                    .section-header::before {
+                        content: '';
+                        position: absolute;
                         display: block;
-                        padding: 10px 1.25rem;
-                        margin-bottom: -1px;
-                        background-color: black;
-                        border: 1px solid #a97e29;
+                        width: 60px;
+                        height: 5px;
+                        background: #a97e29;
+                        bottom: 0;
+                        left: calc(50% - 25px);
+                    }
+                    
+                    .section-header h2 {
+                        font-size: 36px;
+                        text-transform: uppercase;
+                        text-align: center;
+                        font-weight: 700;
+                        margin-bottom: 10px;
+                    }
+                    
+                    .section-header p {
+                        text-align: center;
+                        padding: 0;
+                        margin: 0;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #9195a2;
+                    }
+                    
+                    .section-with-bg {
+                        background-color: #f6f7fd;
+                    }
+                    /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+                    
+                    #header {
+                        height: 90px;
+                        padding: 25px 0;
+                        position: fixed;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        transition: all 0.5s;
+                        z-index: 997;
+                    }
+                    
+                    #header.header-scrolled,
+                    #header.header-fixed {
+                        background: black;
+                        height: 70px;
+                        padding: 15px 0;
+                        transition: all 0.5s;
+                    }
+                    
+                    #header #logo h1 {
+                        font-size: 36px;
+                        margin: 0;
+                        padding: 6px 0;
+                        line-height: 1;
+                        font-family: "Raleway", sans-serif;
+                        font-weight: 700;
+                        letter-spacing: 3px;
+                        text-transform: uppercase;
+                    }
+                    
+                    #header #logo h1 span {
+                        color: #a97e29;
+                    }
+                    
+                    #header #logo h1 a,
+                    #header #logo h1 a:hover {
+                        color: #fff;
+                    }
+                    
+                    #header #logo img {
+                        padding: 0;
+                        margin: 0;
+                        max-height: 40px;
                     }
