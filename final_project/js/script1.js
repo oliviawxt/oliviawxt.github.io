@@ -32,7 +32,7 @@ $("a#recommendation").click(function() {
         }); // end .each
         console.log(dataSet);
 
-        $('#table').DataTable({
+        $('#table1').DataTable({
             data: dataSet,
             retrieve: true,
             columns: [{
