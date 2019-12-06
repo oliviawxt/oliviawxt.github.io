@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 });
 
-$("button#recommendation").click(function() {
+$("a#recommendation").click(function() {
     var items = [];
     var i = 0;
     var airtable_read_endpoint = "https://api.airtable.com/v0/appGux42PODfYM65d/%E6%8E%A8%E8%8D%90%E6%A6%9C%E5%8D%95?api_key=keyFmAJ2vrBSZ6kZH";
