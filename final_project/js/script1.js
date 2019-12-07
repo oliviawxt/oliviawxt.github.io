@@ -65,7 +65,7 @@ $("a#recommendation").click(function() {
 $("a#analysis").click(function() {
     var items = [];
     var i = 0;
-    var airtable_read_endpoint = "https://api.airtable.com/v0/apph8llhifc81kaWE/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90?api_key=keyFmAJ2vrBSZ6kZH";
+    var airtable_read_endpoint = "https://api.airtable.com/v0/apph8llhifc81kaWE/%E6%8E%A8%E8%8D%90%E6%8C%87%E6%95%B0?api_key=keyFmAJ2vrBSZ6kZH";
     var dataSet = [];
     $.getJSON(airtable_read_endpoint, function(result) {
         $.each(result.records, function(key, value) {
