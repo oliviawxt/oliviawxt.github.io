@@ -14,97 +14,50 @@ $(document).ready(function() {
 
 });
 
-$("a#recommendation").click(function() {
-    var items = [];
-    var i = 0;
-    var airtable_read_endpoint = "https://api.airtable.com/v0/appGux42PODfYM65d/%E6%8E%A8%E8%8D%90%E6%A6%9C%E5%8D%95?api_key=keyFmAJ2vrBSZ6kZH";
-    var dataSet = [];
-    $.getJSON(airtable_read_endpoint, function(result) {
-        $.each(result.records, function(key, value) {
-            items = [];
-            items.push(value.fields.音乐剧名称);
-            items.push(value.fields.海报);
-            items.push(value.fields.类型);
-            items.push(value.fields.巡演城市);
-            items.push(value.fields.亮点);
-            dataSet.push(items);
-            console.log(items);
-        }); // end .each
-        console.log(dataSet);
+var items = [];
+var i = 0;
+var airtable_read_endpoint = "https://api.airtable.com/v0/appGux42PODfYM65d/%E6%8E%A8%E8%8D%90%E6%A6%9C%E5%8D%95?api_key=keyFmAJ2vrBSZ6kZH";
+var dataSet = [];
+$.getJSON(airtable_read_endpoint, function(result) {
+$.each(result.records, function(key, value) {
+    items = [];
+    items.push(value.fields.音乐剧名称);
+    items.push(value.fields.评价数量);
+    items.push(value.fields.获奖数量);
+    items.push(value.fields.好评率);
+    items.push(value.fields.推荐程度);
+}); // end .each
+$("#table1").DataTable({
+    data: dataSet,
+    scrollY: '100vh',
+    "scrollX": true,
+    scrollCollapse: true,
+    retrieve: true,
+    columns: [{
+            title: "音乐剧名称",
+            defaultContent: ""
+        },
+        {
+            title: "评价数量",
+            defaultContent: ""
+        },
+        {
+            title: "获奖数量",
+            defaultContent: ""
+        },
+        {
+            title: "好评率",
+            defaultContent: ""
+        },
+        {
+            title: "推荐程度",
+            defaultContent: ""
+        },
 
-        $('#table1').DataTable({
-            data: dataSet,
-            retrieve: true,
-            columns: [{
-                    title: "音乐剧名称",
-                    defaultContent: ""
-                },
-                {
-                    title: "海报",
-                    defaultContent: ""
-                },
-                {
-                    title: "类型",
-                    defaultContent: ""
-                },
-                {
-                    title: "巡演城市",
-                    defaultContent: ""
-                },
-                {
-                    title: "亮点",
-                    defaultContent: ""
-                },
-            ]
-
-        });
-    }); // end .getJSON
-}); // end button
+    ],
 
 
-$("a#analysis").click(function() {
-    var items = [];
-    var i = 0;
-    var airtable_read_endpoint = "https://api.airtable.com/v0/apph8llhifc81kaWE/%E6%8E%A8%E8%8D%90%E6%8C%87%E6%95%B0?api_key=keyFmAJ2vrBSZ6kZH";
-    var dataSet = [];
-    $.getJSON(airtable_read_endpoint, function(result) {
-        $.each(result.records, function(key, value) {
-            items = [];
-            items.push(value.fields.音乐剧名称);
-            items.push(value.fields.评价数量);
-            items.push(value.fields.获奖数量);
-            items.push(value.fields.好评率);
-            items.push(value.fields.推荐程度);
-            dataSet.push(items);
-            console.log(items);
-        }); // end .each
-        console.log(dataSet);
 
-        $('#table2').DataTable({
-            data: dataSet,
-            retrieve: true,
-            columns: [{
-                    title: "音乐剧名称",
-                    defaultContent: ""
-                },
-                {
-                    title: "评价数量",
-                    defaultContent: ""
-                },
-                {
-                    title: "获奖数量",
-                    defaultContent: ""
-                },
-                {
-                    title: "好评率",
-                    defaultContent: ""
-                },
-                {
-                    title: "推荐程度",
-                    defaultContent: ""
-                },
-            ]
-
-        });
-    }); // end .getJSON
+});
+}); // end .getJSON
 }); // end button
