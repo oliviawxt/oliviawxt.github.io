@@ -50,7 +50,7 @@ $("a#analysis").click(function() {
     $("#ana").slideToggle(300);
 });
 
-$("a#data").click(function() {
+$("a#calculation").click(function() {
 var table3_items = [];
 var i = 0;
 var airtable_read_endpoint =
