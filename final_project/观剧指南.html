@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>musical goers</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/venobox/venobox.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="css/style2.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.8/c3.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.8/c3.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Leaflet CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+    <link rel="shortcut icon" href="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+</head>
+
+<body>
+
+    <!--==========================H eader============================-->
+    <header id="header">
+        <div class="container">
+            <div id="logo" class="pull-left">
+                <!-- Uncomment below if you prefer to use a text logo -->
+                <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+                <a href="#intro" class="scrollto">音乐剧咖Musical Goers</a>
+            </div>
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li class="menu-active">
+                        <a href="#home1.html">主页</a>
+                    </li>
+                    <li>
+                        <a href="#home1.html">剧目安利</a>
+                    </li>
+                    <li>
+                        <a href="#home1.html">观剧指南</a>
+                    </li>
+                    <li>
+                        <a href="#home1.html">大咖来访</a>
+                    </li>
+                    <li>
+                        <a href="#home1.html">剧圈文化</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- #nav-menu-container -->
+        </div>
+    </header>
+    <!-- #header -->
+    <!--==========================Intro Section============================-->
+    <section id="intro">
+        <div class="intro-container wow fadeIn">
+            <h1 class="mb-4 pb-0">观剧指南</h1>
+        </div>
+    </section>
+
+    <!--==========================观剧地图Section============================-->
+    <section id="schedule" class="section-with-bg">
+        <div class="container wow fadeInUp">
+            <div class="section-header">
+                <h2>观剧地图</h2>
+            </div>
+
+            <div align="center">
+                <button style="background-color: black" type="button" id='show' onclick="show_districts1();">正在演出</button>
+                <button style="background-color: #a97e29" type="button" id='show' onclick="show_districts2();">即将上演</button>
+
+            </div>
+            <br>
+            <div id="map" style="width: 650px; height: 480px; border: 1px solid #AAA; margin-left: auto; margin-right: auto;" class="map">
+            </div>
+
+    </section>
+
+
+    <!--==========================
+    Footer
+  ============================-->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 footer-info">
+                        <h4>音乐剧咖Musical Goers</h4>
+                        <p>这是一个中国音乐剧同好者的聚集地，旨在为音乐剧爱好者和对音乐剧感兴趣的朋友提供新鲜资讯和有趣见闻。</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-links">
+                        <h4>快速链接</h4>
+                        <ul>
+                            <li><i class="fa fa-angle-right"></i> <a href="#">主页</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="#">剧目安利</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="#">观剧指南</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="#">大咖来访</a></li>
+                            <li><i class="fa fa-angle-right"></i> <a href="#">剧圈文化</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-6 footer-contact">
+                        <h4>声明</h4>
+                        <p>
+                            本网站为香港中文大学新媒体硕士项目COMM5961的课程作业，数据信息由各专业官网整理，欢迎勘误及提出建议。 <br><br>
+                            <strong>联系方式:</strong> 1155130054@link.cuhk.edu.hk<br>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+        -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- #footer -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/superfish/hoverIntent.js"></script>
+    <script src="lib/superfish/superfish.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/venobox/venobox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+    <!-- Template Main Javascript File -->
+    <script src="js/script2.js"></script>
+    <script src="js/script1.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/agency.min.js"></script>
+
+    <!-- Javascript For Map -->
+    <script>
+        var mapboxTiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a>',
+            maxZoom: 18,
+        })
+        var map = L.map('map')
+            .addLayer(mapboxTiles)
+            .setView([23.133794, 113.264618], 13);
+        layerGroup = L.layerGroup().addTo(map);
+
+        var present = L.icon({
+            iconUrl: 'img/marker/bluemarker.png',
+            iconSize: [30, 40], // size of the icon
+            popupAnchor: [0, -15]
+        });
+        var future = L.icon({
+            iconUrl: 'img/marker/yellowmarker.png',
+            iconSize: [30, 40], // size of the icon
+            popupAnchor: [0, -15]
+        });
+        var items = [];
+        var airtable_read_endpoint = "https://api.airtable.com/v0/appYuzIuhJ6jBVnaV/Table%201?api_key=keyFmAJ2vrBSZ6kZH";
+        var data = [];
+        $.getJSON(airtable_read_endpoint, function(result) {
+            $.each(result.records, function(key, value) {
+                items = {};
+                items["name"] = value.fields.Name;
+                items["latitud"] = value.fields.Lat;
+                items["longitud"] = value.fields.Lng;
+                data.push(items);
+                console.log(items);
+            }); // end .each
+        }); // end getJSON
+    </script>
+    <script>
+        function show_districts1() {
+            for (var i in data) {
+                var latlng = L.latLng({
+                    lat: data[i].latitud,
+                    lng: data[i].longitud
+                });
+                L.marker(latlng, {
+                        icon: present
+                    })
+                    .bindPopup('<a href="' + data[i].url + '" target="_blank">' + '<img src="' + data[i].image_url + '" width = "300px"><br>' + data[i].name + '</a>')
+                    .addTo(layerGroup);
+            }
+        }
+    </script>
+    <script>
+        var map2_items = [];
+        var airtable_read_endpoint = "https://api.airtable.com/v0/appmTpWA0IaRT5r2b/Table%201?api_key=keyFmAJ2vrBSZ6kZH";
+        var map2_data = [];
+        $.getJSON(airtable_read_endpoint, function(result) {
+            $.each(result.records, function(key, value) {
+                map2_items = {};
+                map2_items["name"] = value.fields.Name;
+                map2_items["latitud"] = value.fields.Lat;
+                map2_items["longitud"] = value.fields.Lng;
+                map2_data.push(map2_items);
+                console.log(map2_items);
+            }); // end .each
+        }); // end getJSON
+        function show_districts2() {
+            for (var i in map2_data) {
+                var latlng = L.latLng({
+                    lat: map2_data[i].latitud,
+                    lng: map2_data[i].longitud
+                });
+                L.marker(latlng, {
+                        icon: future
+                    })
+                    .bindPopup('<a href="' + map2_data[i].url + '" target="_blank">' + '<img src="' + map2_data[i].image_url + '" width = "300px"><br>' + map2_data[i].name + '</a>')
+                    .addTo(layerGroup);
+            };
+        };
+    </script>
+
+    }); // end .each }); // end getJSON
+
+
+</body>
+
+</html>
