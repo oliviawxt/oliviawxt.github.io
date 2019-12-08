@@ -41,9 +41,6 @@ $(document).ready(function() {
     });
 })
 
-$("a#analysis").click(function() {
-    $("#ana").slideToggle(300);
-});
 
 $("a#calculation").click(function() {
 var table3_items = [];
