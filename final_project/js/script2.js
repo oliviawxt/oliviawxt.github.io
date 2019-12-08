@@ -8,7 +8,6 @@ $(document).ready(function() {
             $.each(result.records, function(key, value) {
                 items = [];
                 items.push(value.fields.音乐剧名称);
-                items.push(value.fields.海报);
                 items.push(value.fields.类型);
                 items.push(value.fields.巡演城市);
                 items.push(value.fields.亮点);
@@ -22,10 +21,6 @@ $(document).ready(function() {
                 retrieve: true,
                 columns: [{
                         title: "音乐剧名称",
-                        defaultContent: ""
-                    },
-                    {
-                        title: "海报",
                         defaultContent: ""
                     },
                     {
