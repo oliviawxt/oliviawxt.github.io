@@ -85,11 +85,16 @@
                 <h2>观剧地图</h2>
             </div>
 
-            <div align="center">
-                <button style="background-color: black" type="button" id='show' onclick="show_districts1();">正在演出</button>
-                <button style="background-color: #a97e29" type="button" id='show' onclick="show_districts2();">即将上演</button>
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" style="background-color: black" type="button" id='show' onclick="show_districts1();">正在演出</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="background-color: #a97e29" type="button" id='show' onclick="show_districts2();">即将上演 </a>
+                </li>
 
-            </div>
+            </ul>
+
             <br>
             <div id="map" style="width: 650px; height: 480px; border: 1px solid #AAA; margin-left: auto; margin-right: auto;" class="map">
             </div>
@@ -201,6 +206,7 @@
             $.each(result.records, function(key, value) {
                 items = {};
                 items["name"] = value.fields.Name;
+                items["image_url"] = value.fields.img_url;
                 items["latitud"] = value.fields.Lat;
                 items["longitud"] = value.fields.Lng;
                 data.push(items);
@@ -231,6 +237,7 @@
             $.each(result.records, function(key, value) {
                 map2_items = {};
                 map2_items["name"] = value.fields.Name;
+                map2_items["image_url"] = value.fields.img_url;
                 map2_items["latitud"] = value.fields.Lat;
                 map2_items["longitud"] = value.fields.Lng;
                 map2_data.push(map2_items);
