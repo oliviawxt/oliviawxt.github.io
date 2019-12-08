@@ -72,49 +72,34 @@
 
     <main id="main">
 
-        <!--==========================
-      剧目安利 Section
-    ============================-->
 
-        <section id="performances" class="wow fadeInUp">
-            <div class="container">
+        <!--==========================近期演出Section============================-->
+        <section id="schedule" class="section-with-bg">
+            <div class="container wow fadeInUp">
                 <div class="section-header">
-                    <h2>剧目安利</h2>
+                    <h2>近期演出</h2>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="performance">
-                            <img src="img/home/1.jpg" alt="pic 1" class="img-fluid">
-                            <div class="details">
-                                <h3><a href="近期演出.html">近期演出</a></h3>
-                                <p>正在上映 一键掌握</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="performance">
-                            <img src="img/home/2.jpg" alt="pic 2" class="img-fluid">
-                            <div class="details">
-                                <h3><a href="performance-details.html">热门推荐</a></h3>
-                                <p>综合榜单 数据呈现</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="performance">
-                            <img src="img/home/3.jpg" alt="pic 3" class="img-fluid">
-                            <div class="details">
-                                <h3><a href="performance-details.html">经典音乐剧</a></h3>
-                                <p>经典剧目 了解更多</p>
-                            </div>
-                        </div>
-                    </div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="acting" role="tab" data-toggle="tab" style="background-color: black;">正在演出</a>
+                    </li>
 
+                </ul>
+                <br>
+                <div id="act" style="display: none;">
+                    <iframe class="airtable-embed" src="https://airtable.com/embed/shrrmCHNuxPIj7lx1?backgroundColor=purple&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
                 </div>
+                <br>
+
+            </div>
+            </div>
+            </div>
+            </div>
             </div>
 
         </section>
+
 
         <!--==========================
       观剧体验 Section
@@ -318,6 +303,9 @@
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
+    <script src="js/script2.js"></script>
+    <script src="js/script1.js"></script>
+    <script src="js/agency.min.js"></script>
 </body>
 
 </html>
