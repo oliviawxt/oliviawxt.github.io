@@ -107,46 +107,62 @@
     </section>
 
     <!--==========================热门推荐Section============================-->
-    <section id="schedule" class="section-with-bg">
-        <div class="container wow fadeInUp">
+    <section id="schedule" class="wow fadeInUp">
+
+        <div class="container-fluid">
+
             <div class="section-header">
+                <br>
+                <br>
+                <br>
                 <h2>热门推荐</h2>
+                <br>
             </div>
-
-            <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" role="tab" data-toggle="tab" style="background-color: black;">推荐榜单</a>
-                </li>
-            </ul>
-            <br>
-            <div class="row" id="get_data" style="align-content: center">
+            <div align="center">
                 <div class="table-responsive">
-                    <table id="table" width="100%" class="table table-bordered"></table>
-                </div>
-            </div>
-        </div>
+                    <table id="table1" width="100%" class="display">
 
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link" id="analysis" role="tab" data-toggle="tab" style="background-color: #a97e29;">音乐剧目分析</a>
-            </li>
-        </ul>
-        <div id="ana" style="display: none;">
-            <iframe class="airtable-embed" src="https://airtable.com/embed/shrCrGA4b3xVjEdyJ?backgroundColor=purple&viewControls=on" frameborder="0" onmousewheel="" width="60%" height="533" style="background: transparent; margin-left: 300px; border: 1px solid #ccc;"></iframe>
-        </div>
+                        <tfoot>
+                            <tr>
+                                <th>音乐剧名称</th>
+                                <th>类型</th>
+                                <th>巡演城市</th>
+                                <th>亮点</th>
+                            </tr>
+                        </tfoot>
 
-        <br>
+                    </table>
+                    <br>
 
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="calculation" role="tab" data-toggle="tab" style="background-color:black">剧目统计</a>
-            </li>
-        </ul>
-        </div>
-        <div class="table-responsive">
-            <table id="table3" width="100%" class="table table-bordered"></table>
-        </div>
-        <div id="chart"></div>
+    </section>
+
+
+
+
+
+
+
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link" id="analysis" role="tab" data-toggle="tab" style="background-color: #a97e29;">音乐剧目分析</a>
+        </li>
+    </ul>
+    <div id="ana" style="display: none;">
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrCrGA4b3xVjEdyJ?backgroundColor=purple&viewControls=on" frameborder="0" onmousewheel="" width="60%" height="533" style="background: transparent; margin-left: 300px; border: 1px solid #ccc;"></iframe>
+    </div>
+
+    <br>
+
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="calculation" role="tab" data-toggle="tab" style="background-color:black">剧目统计</a>
+        </li>
+    </ul>
+    </div>
+    <div class="table-responsive">
+        <table id="table3" width="100%" class="table table-bordered"></table>
+    </div>
+    <div id="chart"></div>
 
     </section>
 
