@@ -1,17 +1,17 @@
 $(document).ready(function() {
 
 
-    $("button#geo_differ").click(function() {
+    $("a#calculation").click(function() {
         var table3_items = [];
         var i = 0;
         var airtable_read_endpoint =
-            "https://api.airtable.com/v0/appJWWovfxpfQ27J5/%E6%95%B8%E6%93%9A?api_key=keybXfluNBh6MO4fz";
+            "https://api.airtable.com/v0/app9ks9Zl0zR50Btc/Imported%20table?api_key=keyFmAJ2vrBSZ6kZH";
         var table3_dataSet = [];
         $.getJSON(airtable_read_endpoint, function(result) {
             $.each(result.records, function(key, value) {
                 table3_items = [];
-                table3_items.push(value.fields.district_name);
-                table3_items.push(value.fields.amount);
+                table3_items.push(value.fields.推荐程度);
+                table3_items.push(value.fields.总计);
 
                 table3_dataSet.push(table3_items);
                 console.log(table3_items);
@@ -22,11 +22,11 @@ $(document).ready(function() {
                 retrieve: true,
                 ordering: false,
                 columns: [{
-                            title: "區域名稱",
+                            title: "推荐程度",
                             defaultContent: ""
                         },
                         {
-                            title: "狗狗寄養所數量",
+                            title: "总计",
                             defaultContent: ""
                         },
                     ] // rmf columns
@@ -45,8 +45,8 @@ $(document).ready(function() {
                 },
 
                 axis: {
-                    x: { label: '區域名稱' },
-                    y: { label: '狗狗寄養所數量' },
+                    x: { label: '推荐程度' },
+                    y: { label: '总计' },
                 },
                 tooltip: {
                     grouped: false
