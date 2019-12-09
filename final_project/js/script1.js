@@ -12,6 +12,10 @@ $(document).ready(function() {
         $("#info").slideToggle(300);
     });
 
+    $("a#recommendation").click(function() {
+        $("#rec").slideToggle(300);
+    });
+
     $("a#analysis").click(function() {
         $("#ana").slideToggle(300);
     });
