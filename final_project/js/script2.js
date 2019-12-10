@@ -14,9 +14,9 @@ $(document).ready(function() {
                 table3_items.push(value.fields.总计);
 
                 table3_dataSet.push(table3_items);
-                console.log(table3_items);
+                //console.log(table3_items);
             }); // end .each
-            console.log(table3_dataSet);
+            //console.log(table3_dataSet);
             $('#table3').DataTable({
                 data: table3_dataSet,
                 retrieve: true,
@@ -33,17 +33,16 @@ $(document).ready(function() {
             }); // end dataTable
 
             var chart = c3.generate({
-
-                size: {
-                    height: 400,
-                    width: 1060
-                },
+                bindto: '#chart',
+                // size: {
+                //     height: 400,
+                //     width: 1060
+                // },
                 data: {
-                    columns: table3_dataSet,
-                    type: 'bar',
+                    columns:table3_dataSet,
+                    type: 'pie',
                     labels: true
                 },
-
                 axis: {
                     x: { label: '推荐程度' },
                     y: { label: '总计' },
@@ -53,9 +52,9 @@ $(document).ready(function() {
                 },
 
             });
-            setTimeout(function() {
-                chart.transform('pie', table3_dataSet);
-            }, 1000);
+            // setTimeout(function() {
+            //     chart.transform('pie', table3_dataSet);
+            // }, 1000);
         }); // end .getJSON
     }); // end button
 }); // document ready
