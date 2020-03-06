@@ -1,25 +1,5 @@
 {% extends "base.html" %} {% block content %}
 
-<style>
-    .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-    
-    img {
-        object-fit: cover
-    }
-    
-    @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-        }
-    }
-</style>
 
 <section class="jumbotron text-center">
     <div class="container">
@@ -31,12 +11,15 @@
 <div class="album py-5 bg-light">
     <div class="container">
 
+
         {% for item in dataset %} {% if loop.index == 1 %}{% set counter = ( counter | default(1) ) %}{% endif %} {% if counter == 1 %}
         <div class="row">{% endif %}
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <title>Placeholder</title><img height="225" width="auto" src="{{ item['poster'] }}" />
-                    <div class="card-body">
+            <div class="col-md-4" style="padding-right: 15px;padding-left: 15px;padding-bottom: 15px">
+                <div class="card mb-4 shadow-sm" style="border: 1px solid rgba(0,0,0,.125);
+                border-radius: 0.5rem;
+                box-shadow: 0 .2rem .5rem rgba(0,0,0,.125);">
+                    <img width="100%" height="200px" src="{{ item['poster'] }}">
+                    <div class="card-body" style="padding:1.25rem">
                         <p class="card-text">音乐剧名称: {{ item['音乐剧名称'] }}<br>类型: {{ item['类型'] }}<br>最新卡司: {{ item['最新卡司'] }}<br>评价: {{ item['评价']}}</p>
 
                         <div class="d-flex justify-content-between align-items-center">
