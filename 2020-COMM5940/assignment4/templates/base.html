@@ -2,52 +2,69 @@
 <html lang="en">
 
 <head>
-    <title>Musical goers assign4</title>
+    <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <!--link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json"-->
+    <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <!--link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico"-->
+    <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+
+
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-                <a class="navbar-brand" href="#" 音乐剧咖Musicalgoers</a>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex align-items-center">
+            <div class="p-2 bd-highlight">
+                <a class="navbar-brand" href="/">音乐剧咖Musicalgoers</a>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">主页</a></li>
-                    <li><a href="/album">剧目安利</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span>登出</a></li>
-                    <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> 登入</a></li>
-                </ul>
+            <div class="p-2 bd-highlight">
+                <a class="btn btn-light" href="/" role="button">主页</a>
+                <a class="btn btn-light" href="/album" role="button">剧目安利</a>
+            </div>
+            <div class="ml-auto p-2 bd-highlight">
+                <a class="btn btn-light" href="/logout" role="button"><span class="glyphicon glyphicon-log-out"></span> 登出</a>
+                <a class="btn btn-light" href="/login" role="button"><span class="glyphicon glyphicon-log-in"></span> 登入</a>
             </div>
         </div>
-    </nav>
+    </div>
+
+
     <div class="container">
         {% block content %} {% endblock %}
     </div>
 
-    <div class="footer">
-        <div class="footer">
-            <div class="container">
-                <p style="
-              color: white;
-              vertical-align: middle;
-              text-decoration: none;">从古典到现代，从浪漫到激情，和我们一起探索音乐剧的世界吧！</p>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>
