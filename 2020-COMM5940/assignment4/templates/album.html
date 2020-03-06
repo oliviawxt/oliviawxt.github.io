@@ -1,33 +1,57 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
+<section class="jumbotron text-center" style="background-color: #fffef8;">
+    <div class="container">
+        <h1 id="albumTitle" style="color:#a97e29;">{{album_user.name}}'s Website</h1>
+    </div>
+</section>
 
-   <div class="container">
-      <h6 class="lead text-muted">{{album_user.name}}'s Website</h6>
-      <hr>
-   </div>
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    img {
+        object-fit: cover
+    }
+    
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
 
-  <div class="album">
+<div class="album">
     <div class="container">
 
-       {% for item in dataset %}
-        {% if loop.index == 1 %}{% set counter = ( counter | default(1) ) %}{% endif %}
-        {% if counter == 1 %}<div class="row">{% endif %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <title>Placeholder</title><img height="225" width="auto" src="{{ item['poster'] }}"/>
-            <div class="card-body">
-              <p class="card-text">音乐剧名称: {{ item['音乐剧名称'] }}<br>类型: {{ item['类型'] }}<br>最新卡司: {{ item['最新卡司'] }}<br>评价: {{ item['评价']}}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">No. {{ loop.index }}</small>
-              </div>
+        {% for item in dataset %} {% if loop.index == 1 %}{% set counter = ( counter | default(1) ) %}{% endif %} {% if counter == 1 %}
+        <div class="row">{% endif %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <title>Placeholder</title><img height="225" width="auto" src="{{ item['poster'] }}" />
+                    <div class="card-body">
+                        <p class="card-text">音乐剧名称: {{ item['音乐剧名称'] }}<br>类型: {{ item['类型'] }}<br>最新卡司: {{ item['最新卡司'] }}<br>评价: {{ item['评价']}}</p>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div> 
-       {% if counter == 3 %}</div><!--end row-->{%  set counter = ( counter | default(1) ) %}{% else %}{% set counter = ( counter | default(0) ) + 1 %}{% endif %}
-      {% endfor %} 
-      </div>
-    </div>
+        </div>
+        {% if counter == 3 %}</div>
+    <!--end row-->{% set counter = ( counter | default(1) ) %}{% else %}{% set counter = ( counter | default(0) ) + 1 %}{% endif %} {% endfor %}
+</div>
+</div>
 
 
 {% endblock %}
