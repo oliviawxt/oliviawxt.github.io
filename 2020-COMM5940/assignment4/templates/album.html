@@ -1,11 +1,5 @@
 {% extends "base.html" %} {% block content %}
 
-<section class="jumbotron text-center" style="background-color: #fffef8;">
-    <div class="container">
-        <h1 id="albumTitle" style="color:#a97e29;">{{album_user.name}}'s Website</h1>
-    </div>
-</section>
-
 <style>
     .bd-placeholder-img {
         font-size: 1.125rem;
@@ -27,7 +21,14 @@
     }
 </style>
 
-<div class="album">
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 id="albumTitle" style="color:#a97e29;">{{album_user.name}}'s Website</h1>
+    </div>
+</section>
+
+
+<div class="album py-5 bg-light">
     <div class="container">
 
         {% for item in dataset %} {% if loop.index == 1 %}{% set counter = ( counter | default(1) ) %}{% endif %} {% if counter == 1 %}
