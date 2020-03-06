@@ -7,6 +7,8 @@
  1. PythonAnywhere link: OliviaWangtt.pythonanywhere.com
  
  Email: oliviawxt@gmail.com;    password: 1234
+ 
  2. Sql file 
+ 
  3. Jupyternotbook codes and templates 
  
