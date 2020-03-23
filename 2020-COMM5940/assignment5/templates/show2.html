@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block content %} {% for item in dataset %} {% if loop.index == 1 %}{% set counter = ( counter | default(1) ) %}{% endif %} {% if counter == 1 %}
+<div class="row">{% endif %}
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <p>Col#:{{ loop.index }}<br>音乐剧名称:{{ item['音乐剧名称'] }}<br>类型:{{ item['类型'] }}<br>poster:{{ item['poster'] }}<br>最新卡司:{{ item['最新卡司'] }}<br>评价:{{ item['评价'] }}</p>
+            <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+            </div>
+        </div>
+    </div>
+    {% if counter == 3 %}</div>
+<!--end row-->{% set counter = ( counter | default(1) ) %}{% else %}{% set counter = ( counter | default(0) ) + 1 %}{% endif %} {% endfor %} {% endblock %}
